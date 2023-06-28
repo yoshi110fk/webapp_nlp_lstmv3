@@ -1,0 +1,70 @@
+<title>Patent Classification App</title>
+
+{% if claim_1st %}
+    <h4>特許番号：{{number}}</h4>
+    <h4>Claim 1</h4>
+    <div style="margin-right: 400px;">
+    <h4>{{claim_1st}}</h4>
+    <table border="3" width="1000">
+      {%if category == '0' %}
+        <tr>
+          <th width="17%" style="background-color:aqua">本体制御関連</th>
+          <th width="17%" >リード関連</th>
+          <th width="17%" >外部機器連携関連</th>
+          <th width="17%" >デバイス構成関連</th>
+          <th width="17%" >その他</th>
+          <th width="15%" >ノイズ</th>
+        </tr>
+      {% elif category == '1' %}
+        <tr>
+          <th width="17%" >本体制御関連</th>
+          <th width="17%" style="background-color:aqua">リード関連</th>
+          <th width="17%" >外部機器連携関連</th>
+          <th width="17%" >デバイス構成関連</th>
+          <th width="17%" >その他</th>
+          <th width="15%" >ノイズ</th>
+        </tr>
+      {% elif category == '2' %}
+        <tr>
+          <th width="17%" >本体制御関連</th>
+          <th width="17%" >リード関連</th>
+          <th width="17%" style="background-color:aqua">外部機器連携関連</th>
+          <th width="17%" >デバイス構成関連</th>
+          <th width="17%" >その他</th>
+          <th width="17%" >ノイズ</th>
+        </tr>
+      {% elif category == '3' %}
+        <tr>
+          <th width="17%" >本体制御関連</th>
+          <th width="17%" >リード関連</th>
+          <th width="17%" >外部機器連携関連</th>
+          <th width="17%" style="background-color:aqua">デバイス構成関連</th>
+          <th width="17%" >その他</th>
+          <th width="17%" >ノイズ</th>
+        </tr>
+      {% elif category == '4' %}
+        <tr>
+          <th width="17%" >本体制御関連</th>
+          <th width="17%" >リード関連</th>
+          <th width="17%" >外部機器連携関連</th>
+          <th width="17%" >デバイス構成関連</th>
+          <th width="17%" style="background-color:aqua">その他</th>
+          <th width="15%" >ノイズ</th>
+        </tr>
+        {% elif category == '5' %}
+        <tr>
+          <th width="17%" >本体制御関連</th>
+          <th width="17%" >リード関連</th>
+          <th width="17%" >外部機器連携関連</th>
+          <th width="17%" >デバイス構成関連</th>
+          <th width="17%" >その他</th>
+          <th width="15%" style="background-color:aqua">ノイズ</th>
+        </tr>
+      {% endif %}
+    </table><br>
+    
+    <a href="./">トップへ戻る</a>
+    </div>
+{% else %}
+    <a href="./">トップへ戻る</a>
+{% endif %}

@@ -1,0 +1,11 @@
+<title>Patent Classification App</title>
+
+{% if claim_1st %}
+    <h4>特許番号：{{number}}</h4>
+
+    <h4>Claim 1を取得できませんでした。<br>特許番号が正しいかどうか確認してください。</h4>
+    
+    <a href="./">トップへ戻る</a>
+{% else %}
+    <a href="./">トップへ戻る</a>
+{% endif %}
